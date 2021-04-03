@@ -1,0 +1,49 @@
+body{
+    background-color:rgb(77, 76, 76);
+}
+.barra{
+    display: inline-block;
+    margin-left:20%;
+    width: 80%;
+    height: 190px;
+    background-color:rgb(113, 213, 247);
+}
+.barra1{
+    display: inline-block;
+    margin-left:20%;
+    width: 80%;
+    height: 190px;
+    background-color: yellow;
+}
+.barra2{
+    display: inline-block;
+    margin-left:20%;
+    width: 80%;
+    height: 190px;
+    background-color: orange;
+}
+.barra3{
+    display: inline-block;
+    margin-left:20%;
+    width: 80%;
+    height: 190px;
+    background-color: red;
+}
+.outer { 
+    justify-content: center;
+  }
+
+
+ul.navbar {
+    color: rgb(77, 76, 76);
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+a{
+    color:white;
+}
+p1,p2,p3,p4,h1,h2,h3,h4,a{
+    font-family: sans-serif;
+    font-size: relative;
+}
