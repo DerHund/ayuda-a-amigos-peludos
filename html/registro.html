@@ -1,27 +1,151 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda a un peludo</title>
+    <link href="../css/estilos2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div id="element1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+        <img src="../static/logo.png" width=10%  alt="Logo" class ="rounded-circle" >
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+          <div class="collapse navbar-collapse" id="navbarNav"  >
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../html/index.html">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Adopta
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="../html/gato.html">Gatos</a>
+                      <a class="dropdown-item" href="../html/perros.html">Perros</a>
+                  </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="../html/nosotros.html">Nosotros</a>
+              </li>
+            </ul>
+          </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+        </nav>
+        </div>
+
+        <div class="container ">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="well">
+                      <form class="form-horizontal" method="post">
+                          <fieldset>
+                              <legend class="text-center header">Contactanos</legend>
+      
+                              <div class="form-group">
+                                  <span class="col-md-1 col-md-offset-2"><i class="fa fa-user bigicon"></i></span>
+                                  <div class="col-md-8">
+                                      <input id="fname" name="name" type="text" placeholder="Nombre completo" class="form-control">
+                                  </div>
+                              </div>
+      
+                              <div class="form-group">
+                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                  <div class="col-md-8">
+                                      <input id="email" name="email" type="text" placeholder="Direccion de email" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="identifacion" name="identifacion" type="text" placeholder="Rut o pasaporte" class="form-control">
+                                </div>
+                            </div>
+      
+                              <div class="form-group">
+                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                  <div class="col-md-8">
+                                      <input id="telefono" name="telefono" type="text" placeholder="Telefono" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control">
+                                </div>
+                            </div>
+      
+                              <div class="form-group">
+                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                  <div class="col-md-8">
+                                      <textarea class="form-control" id="message" name="message" placeholder="Ingresa la razon por la que quieres comunicarte :)" rows="7"></textarea>
+                                  </div>
+                              </div>
+      
+                              <div class="form-group">
+                                  <div class="col-md-6 text-center">
+                                      <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+
+
+                                      <button type="reset" class="btn btn-primary btn-lg">Limpiar datos</button>
+                                  </div>
+                              </div>
+                          </fieldset>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+        <footer class="bg-light text-center text-lg-start">
+
+          <div class="container p-4">
+          
+              <div class="row justify-content-center">
+                  
+                  <div class="col-sm-1">
+                      <img class ="rounded-circle w-100" src="../static/footer/F01.png" alt="facebook">
+                  </div>
+                  <div class="col-sm-1">
+                      <img class ="rounded-circle  w-100" src="../static/footer/F02.png" alt="twitter">
+                  </div>
+                  <div class="col-sm-1">
+                      <img class ="rounded-circle w-100" src="../static/footer/F03.png" alt="instagram"> 
+                  </div>
+      
+      
+              </div>
+      
+          </div>
+      
+      
+      
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <a class="text-dark" href="">Estamos ayudando desde el 2021</a>
+          </div>
+      
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
