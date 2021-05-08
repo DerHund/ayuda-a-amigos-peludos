@@ -12,7 +12,60 @@
 
 </head>
 
-  <body>
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script  type="text/Javascript">
+        $(document).ready(function() {
+        $("#basic-form").validate({
+            rules: {
+            Fnombre : {
+                required: true,
+                minlength: 1
+            },
+            age: {
+                required: true,
+                number: true,
+                min: 18
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            weight: {
+                required: {
+                depends: function(elem) {
+                    return $("#age").val() > 50
+                }
+                },
+                number: true,
+                min: 0
+            }
+            },
+            messages : {
+            Fnombre: {
+                minlength: "Name should be at least 1 characters"
+            },
+            age: {
+                required: "Please enter your age",
+                number: "Please enter your age as a numerical value",
+                min: "You must be at least 18 years old"
+            },
+            email: {
+                email: "The email should be in the format: abc@domain.tld"
+            },
+            weight: {
+                required: "People with age over 50 have to enter their weight",
+                number: "Please enter your weight as a numerical value"
+            }
+            }
+        });
+        });
+    </script>
+
+
+
     <div id="element1">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -64,42 +117,42 @@
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2"><i class="fa fa-user bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <input id="Fnombre" name="name" type="text" minlength="1" placeholder="Nombre completo" class="form-control" required>
+                                    <input id="Fnombre" name="name" type="text" placeholder="Nombre completo" class="form-control" required>
                                 </div>
                             </div>
       
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <input id="Femail" name="email" type="text" minlength="1" placeholder="Direccion de email" class="form-control" required>
+                                    <input id="Femail" name="email" type="text" placeholder="Direccion de email" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <input id="Fid" name="identifacion" type="text" minlength="8" maxlength="8" placeholder="Rut o pasaporte" class="form-control" required>
+                                    <input id="Fid" name="identifacion" type="text" placeholder="Rut o pasaporte" class="form-control">
                                 </div>
                             </div>
       
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <input id="Ftel" name="telefono" type="text" placeholder="Telefono" class="form-control">
+                                    <input id="Ftelefono" name="telefono" type="text" placeholder="Telefono" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <input id="Fciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control" required>
+                                    <input id="Fciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control">
                                 </div>
                             </div>
       
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                                 <div class="col-md-8">
-                                    <textarea class="form-control" id="Fmensaje" name="message"  minlength="50" placeholder="Ingresa la razon por la que quieres comunicarte :)" rows="7" required></textarea>
+                                    <textarea class="form-control" id="Fmensaje" name="message" placeholder="Ingresa la razon por la que quieres comunicarte :)" rows="7"></textarea>
                                 </div>
                             </div>
       
@@ -149,16 +202,13 @@
       
     </footer>
 
-    
 
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
   
 
 </body>
